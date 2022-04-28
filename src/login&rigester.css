@@ -1,0 +1,86 @@
+.public {
+    width: 360px;
+    height: 436px;
+    margin: 70px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.public .login {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
+    border: 1px solid #ebeef5;
+    background-color: #fff;
+    color: #303133;
+    position: absolute;
+}
+
+.login {
+    transform: translateX(-101%);
+    transition: 2s all;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+}
+
+.login h2 {
+    margin-top: -15px;
+}
+
+.login div {
+    line-height: 40px;
+    position: relative;
+    font-size: 14px;
+}
+
+.login div input {
+    margin-top: -15px;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #dcdfe6;
+    box-sizing: border-box;
+    color: #606266;
+    display: inline-block;
+    font-size: inherit;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    width: 100%;
+}
+
+.login div h4 {
+    font-weight: 400;
+}
+
+.login label {
+    cursor: pointer;
+}
+
+.login label i {
+    vertical-align: middle;
+}
+
+.iconfont {
+    margin-top: -15px;
+    font-size: 45px;
+}
+
+.login input[type="button"] {
+    color: #fff;
+    background-color: #409eff;
+    border-color: #409eff;
+    width: 70px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 10px;
+}
+
+
+/* js */
+
+.login_enter {
+    transform: translateX(0px);
+}

@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mi</title>
+<script defer src="main/main.js"></script><link href="main.css" rel="stylesheet"></head>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<!-- <link rel="stylesheet" href="./src/same.css">
+<link rel="stylesheet" href="./src/index.css">
+<link rel="stylesheet" href="./src/command.css">
+<link rel="stylesheet" href="./src/slider.css">
+<link rel="stylesheet" href="./src/font_3207587_zixofqh46on/iconfont.css">
+<script type="module" src="./src/withenav.js" defer></script>
+<script type="module" src="./src/leftnav.js" defer></script>
+<script type="module" src="./src/index.js " defer></script>
+<script type="module" src="./src/slider.js " defer></script> -->
+
+<body>
+    <!-- 黑色导航开始 -->
+    <div class="black_nav">
+        <div class="wrap">
+            <div class="black_nav_left">
+                <ul>
+                    <li><a href="#">小米商城</a><span>|</span></li>
+                    <li><a href="https://www.miui.com/" target="_blank">MIUI</a><span>|</span></li>
+                    <li><a href="#" target="_blank">米聊</a><span>|</span></li>
+                    <li><a href="#" target="_blank">游戏</a><span>|</span></li>
+                    <li><a href="#" target="_blank">多看阅读</a><span>|</span></li>
+                    <li><a href="#" target="_blank">云服务</a><span>|</span></li>
+                    <li><a href="#" target="_blank">金融</a><span>|</span></li>
+                    <li><a href="#" target="_blank">小米网移动版</a><span>|</span></li>
+                    <li><a href="#" target="_blank">问题反馈</a><span>|</span></li>
+                    <li><a href="#" target="_blank">Select Location</a></li>
+                </ul>
+            </div>
+            <div class="black_nav_right">
+                <ul class="user">
+                    <li><a href="./login&register.html" class="login_btn">登录</a><span>|</span></li>
+                    <li><a href="./login&register.html" class="register_btn">注册</a><span>|</span></li>
+                    <li><a href="#" target="_blank">消息通知</a></li>
+                    <li class="shopping_car">
+                        <a href="javascript: void(0);"><i></i>购物车 (<i class="car_number">0</i>)</a>
+                        <div class="cart">
+                            <ul class="car_goods">
+                                <div class="start">购物车中还没有商品，赶紧选购吧！</div>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 黑色导航结束 -->
+    <!-- 白色导航开始 -->
+    <div class="white_nav">
+        <div class="wrap ">
+            <a href="#"><img src="https://s02.mifile.cn/assets/static/image/logo-mi2.png" alt="导航栏logo" class="logo" /></a>
+            <ul>
+                <li>
+                    <a href="#">小米手机</a>
+                    <div class="nav_select">
+                        <div class="wrap">
+                            <ul class="nav_bottom">
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">红米</a>
+                    <div class="nav_select">
+                        <div class="wrap">
+                            <ul class="nav_bottom">
+
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">平板·笔记本</a>
+                    <div class="nav_select">
+                        <div class="wrap">
+                            <ul class="nav_bottom">
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">电视</a>
+                    <div class="nav_select">
+                        <div class="wrap">
+                            <ul class="nav_bottom">
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">盒子·影音</a>
+                    <div class="nav_select">
+                        <div class="wrap">
+                            <ul class="nav_bottom">
+
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">路由器</a>
+                    <div class="nav_select">
+                        <div class="wrap">
+                            <ul class="nav_bottom">
+
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">智能硬件</a>
+                    <div class="nav_select">
+                        <div class="wrap">
+                            <ul class="nav_bottom">
+
+                        </div>
+                    </div>
+                </li>
+
+                <li><a href="">服务</a></li>
+                <li><a href="">社区</a></li>
+                <li class="search">
+                    <input type="text"><button class="iconfont">&#xe603;</button>
+                    <div class="hotword_list">
+                        <ul>
+                            <li><a href="">全部商品</a></li>
+                            <li><a href="">小米11</a></li>
+                            <li><a href="">空调</a></li>
+                            <li><a href="">小米手机</a></li>
+                            <li><a href="">洗衣机</a></li>
+                            <li><a href="">耳机</a></li>
+                            <li><a href="">冰箱</a></li>
+                        </ul>
+                    </div>
+                </li>
+                </ul>
+        </div>
+    </div>
+    <!-- 白色导航结束 -->
+    <!-- 滑动门+轮播图开始 -->
+    <div class="carousel">
+        <div class="wrap">
+            <div class="left_nav">
+                <ul class="left">
+                    <li>
+                        <a href="#">手机 电话卡<i >></i></a>
+                        <div class="block">
+                            <ul class="left_goods">
+
+
+
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li>
+                        <a href="#">电视 盒子<i >></i></a>
+                        <div class="block">
+                            <ul class="left_goods">
+
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li>
+                        <a href="#">笔记本 显示器<i >></i></a>
+                        <div class="block">
+                            <ul class="left_goods">
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">家电 插线板<i >>;</i></a>
+                        <div class="block">
+                            <ul class="left_goods">
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">出行 穿戴<i >></i></a>
+                        <div class="block">
+                            <ul class="left_goods">
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">智能 路由器<i >></i></a>
+                        <div class="block">
+                            <ul class="left_goods">
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">电源 配件<i >></i></a>
+                        <div class="block">
+                            <ul class="left_goods">
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">健康 儿童<i >></i></a>
+                        <div class="block">
+                            <ul class="left_goods">
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">耳机 音箱<i >></i></a>
+                        <div class="block">
+                            <ul class="left_goods">
+
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li>
+                        <a href="#">生活 箱包<i >></i></a>
+                        <div class="block">
+                            <ul class="left_goods">
+
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="slider">
+            </div>
+        </div>
+    </div>
+    <!-- 滑动门+轮播图结束 -->
+    <!-- ad 部分开始 -->
+    <div class="ad">
+        <div class="wrap">
+            <div class="ad_nav">
+                <ul>
+                    <li class="ad_nav_ver ad_nav_hor"><a href="#"><i>  <img src="img/adleft1.png" alt=""></i></a>
+                        <h4>小米秒杀</h4>
+                    </li>
+                    <li class="ad_nav_ver  ad_nav_hor"><a href="#"><i> <img src="img/adleft2.png" alt=""></i></a>
+                        <h4>企业团购</h4>
+                    </li>
+                    <li class="ad_nav_hor">
+                        <a href="#"><i> <img src="img/adleft3.png" alt=""></i></a>
+                        <h4>F码通道</h4>
+                    </li>
+                    <li class="ad_nav_ver"><a href="#"><i > <img src="img/adleft4.png" alt=""></i></a>
+                        <h4>米粉卡</h4>
+                    </li>
+                    <li class="ad_nav_ver"><a href="#"><i> <img src="img/adleft5.png" alt=""></i></a>
+                        <h4>以旧换新</h4>
+                    </li>
+                    <li><a href="#"><i> <img src="img/adleft5.png" alt=""></i></a>
+                        <h4>话费充值</h4>
+                    </li>
+                </ul>
+            </div>
+            <a href="#"><img src="img/ad1.jpg" alt=""></a>
+            <a href="#"><img src="img/ad2.jpg" alt=""></a>
+            <a href="#"><img src="img/ad3.jpg" alt=""></a>
+        </div>
+    </div>
+    <!-- ad 部分开始 -->
+    <!-- 商品部分开始 -->
+    <div class="buy_good">
+
+        <div class="wrap">
+            <div>
+                <h1>购买商品</h1>
+                <ul class="goods">
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 商品部分结束 -->
+    <!-- 剩余商品部分开始 -->
+    <div class="back_color" style="background: #f5f5f5;">
+
+        <div class="rest_nav">
+            <div>
+                <h1>家电</h1>
+                <ul class="wrap">
+                    <li>
+                        <div class="small_good first">
+
+                        </div>
+
+                    </li>
+                    <li>
+                        <div class="small_good">
+                            <a href=""><img src="img/家电2.png" alt="">
+                                <h3> 小米4A 3英寸电视 </h3>
+                                <h5> 我是电视！！！</h5>
+                                <h4> ￥2999</h4>
+                            </a>
+                            <div>
+                                <i>昨天收到了物流真的超级好,就算是下雨天气也不会耽搁！！</i>
+                            </div>
+                        </div>
+                        <div class="small_good">
+                            <a href=""><img src="img/家电2.png" alt="">
+                                <h3> 小米4A 3英寸电视 </h3>
+                                <h5> 我是电视！！！</h5>
+                                <h4> ￥2999</h4>
+                            </a>
+                            <div>
+                                <i>昨天收到了物流真的超级好,就算是下雨天气也不会耽搁！！</i>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li>
+
+                        <div class="small_good">
+                            <a href=""><img src="img/家电2.png" alt="">
+                                <h3> 小米4A 3英寸电视 </h3>
+                                <h5> 我是电视！！！</h5>
+                                <h4> ￥2999</h4>
+                            </a>
+                            <div>
+                                <i>昨天收到了物流真的超级好,就算是下雨天气也不会耽搁！！</i>
+                            </div>
+                        </div>
+                        <div class="small_good">
+                            <a href=""><img src="img/家电2.png" alt="">
+                                <h3> 小米4A 3英寸电视 </h3>
+                                <h5> 我是电视！！！</h5>
+                                <h4> ￥2999</h4>
+                            </a>
+                            <div>
+                                <i>昨天收到了物流真的超级好,就算是下雨天气也不会耽搁！！</i>
+                            </div>
+                        </div>
+
+
+                    </li>
+                    <li>
+
+                        <div class="small_good">
+                            <a href=""><img src="img/家电2.png" alt="">
+                                <h3> 小米4A 3英寸电视 </h3>
+                                <h5> 我是电视！！！</h5>
+                                <h4> ￥2999</h4>
+
+                            </a>
+                            <div>
+                                <i>昨天收到了物流真的超级好,就算是下雨天气也不会耽搁！！</i>
+                            </div>
+                        </div>
+                        <div class="small_good">
+                            <a href=""><img src="img/家电2.png" alt="">
+                                <h3> 小米4A 3英寸电视 </h3>
+                                <h5> 我是电视！！！</h5>
+                                <h4> ￥2999</h4>
+                            </a>
+                            <div>
+                                <i>昨天收到了物流真的超级好,就算是下雨天气也不会耽搁！！</i>
+                            </div>
+                        </div>
+
+
+                    </li>
+                    <li>
+                        <div class="small_good">
+                            <a href=""><img src="img/家电2.png" alt="">
+                                <h3> 小米4A 3英寸电视 </h3>
+                                <h5> 我是电视！！！</h5>
+                                <h4> ￥2999</h4>
+                            </a>
+                            <div>
+                                <i>昨天收到了物流真的超级好,就算是下雨天气也不会耽搁！！</i>
+                            </div>
+                        </div>
+
+                        <div class="more">
+                            <a href=""><span><h3>米家扫地机器人</h3><h4>￥1699</h4></span>    <img src="img/家电3.jpg" alt=""></a>
+                            <a href=""><span><h3>浏览更多</h3><h4>热门</h4></span> <img src="img/更多.png" alt=""></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="rest_nav">
+            <div>
+                <h1>智能</h1>
+                <ul class="wrap">
+                    <li>
+                        <div class="small_good second">
+                            <img src="img/智能1.jpg" alt="">
+                        </div>
+                        <div class="small_good second">
+                            <img src="img/智能2.jpg" alt="">
+                        </div>
+
+                    </li>
+                    <li>
+                        <div class="small_good">
+                            <a href=""><img src="img/智能3.jpg" alt="">
+                                <h3> 小米4A 3英寸电视 </h3>
+                                <h5> 我是电视！！！</h5>
+                                <h4> ￥2999</h4>
+                            </a>
+                            <div>
+                                <i>昨天收到了物流真的超级好,就算是下雨天气也不会耽搁！！</i>
+                            </div>
+                        </div>
+                        <div class="small_good">
+                            <a href=""><img src="img/智能3.jpg" alt="">
+                                <h3> 小米4A 3英寸电视 </h3>
+                                <h5> 我是电视！！！</h5>
+                                <h4> ￥2999</h4>
+                            </a>
+                            <div>
+                                <i>昨天收到了物流真的超级好,就算是下雨天气也不会耽搁！！</i>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li>
+
+                        <div class="small_good">
+                            <a href=""><img src="img/智能3.jpg" alt="">
+                                <h3> 小米4A 3英寸电视 </h3>
+                                <h5> 我是电视！！！</h5>
+                                <h4> ￥2999</h4>
+                            </a>
+                            <div>
+                                <i>昨天收到了物流真的超级好,就算是下雨天气也不会耽搁！！</i>
+                            </div>
+                        </div>
+                        <div class="small_good">
+                            <a href=""><img src="img/智能3.jpg" alt="">
+                                <h3> 小米4A 3英寸电视 </h3>
+                                <h5> 我是电视！！！</h5>
+                                <h4> ￥2999</h4>
+                            </a>
+                            <div>
+                                <i>昨天收到了物流真的超级好,就算是下雨天气也不会耽搁！！</i>
+                            </div>
+                        </div>
+
+
+                    </li>
+                    <li>
+
+                        <div class="small_good">
+                            <a href=""><img src="img/智能3.jpg" alt="">
+                                <h3> 小米4A 3英寸电视 </h3>
+                                <h5> 我是电视！！！</h5>
+                                <h4> ￥2999</h4>
+
+                            </a>
+                            <div>
+                                <i>昨天收到了物流真的超级好,就算是下雨天气也不会耽搁！！</i>
+                            </div>
+                        </div>
+                        <div class="small_good">
+                            <a href=""><img src="img/智能3.jpg" alt="">
+                                <h3> 小米4A 3英寸电视 </h3>
+                                <h5> 我是电视！！！</h5>
+                                <h4> ￥2999</h4>
+                            </a>
+                            <div>
+                                <i>昨天收到了物流真的超级好,就算是下雨天气也不会耽搁！！</i>
+                            </div>
+                        </div>
+
+
+                    </li>
+                    <li>
+                        <div class="small_good">
+                            <a href=""><img src="img/智能3.jpg" alt="">
+                                <h3> 小米4A 3英寸电视 </h3>
+                                <h5> 我是电视！！！</h5>
+                                <h4> ￥2999</h4>
+                            </a>
+                            <div>
+                                <i>昨天收到了物流真的超级好,就算是下雨天气也不会耽搁！！</i>
+                            </div>
+                        </div>
+
+                        <div class="more">
+                            <a href=""><span><h3>小米千兆网线</h3><h4>￥14.9</h4></span>    <img src="img/智能4.jpg" alt=""></a>
+                            <a href=""><span><h3>浏览更多</h3><h4>热门</h4></span> <img src="img/更多.png" alt=""></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="rest_nav">
+            <div>
+                <h1>搭配</h1>
+                <ul class="wrap">
+                    <li>
+                        <div class="small_good second">
+                            <img src="img/搭配1.jpg" alt="">
+                        </div>
+                        <div class="small_good second">
+                            <img src="img/搭配2.jpg" alt="">
+                        </div>
+
+                    </li>
+                    <li>
+                        <div class="small_good">
+                            <a href=""><img src="img/搭配3.jpg" alt="">
+                                <h3> 小米4A 3英寸电视 </h3>
+                                <h5> 我是电视！！！</h5>
+                                <h4> ￥2999</h4>
+                            </a>
+                            <div>
+                                <i>昨天收到了物流真的超级好,就算是下雨天气也不会耽搁！！</i>
+                            </div>
+                        </div>
+                        <div class="small_good">
+                            <a href=""><img src="img/搭配3.jpg" alt="">
+                                <h3> 小米4A 3英寸电视 </h3>
+                                <h5> 我是电视！！！</h5>
+                                <h4> ￥2999</h4>
+                            </a>
+                            <div>
+                                <i>昨天收到了物流真的超级好,就算是下雨天气也不会耽搁！！</i>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li>
+
+                        <div class="small_good">
+                            <a href=""><img src="img/搭配3.jpg" alt="">
+                                <h3> 小米4A 3英寸电视 </h3>
+                                <h5> 我是电视！！！</h5>
+                                <h4> ￥2999</h4>
+                            </a>
+                            <div>
+                                <i>昨天收到了物流真的超级好,就算是下雨天气也不会耽搁！！</i>
+                            </div>
+                        </div>
+                        <div class="small_good">
+                            <a href=""><img src="img/搭配3.jpg" alt="">
+                                <h3> 小米4A 3英寸电视 </h3>
+                                <h5> 我是电视！！！</h5>
+                                <h4> ￥2999</h4>
+                            </a>
+                            <div>
+                                <i>昨天收到了物流真的超级好,就算是下雨天气也不会耽搁！！</i>
+                            </div>
+                        </div>
+
+
+                    </li>
+                    <li>
+
+                        <div class="small_good">
+                            <a href=""><img src="img/搭配3.jpg" alt="">
+                                <h3> 小米4A 3英寸电视 </h3>
+                                <h5> 我是电视！！！</h5>
+                                <h4> ￥2999</h4>
+
+                            </a>
+                            <div>
+                                <i>昨天收到了物流真的超级好,就算是下雨天气也不会耽搁！！</i>
+                            </div>
+                        </div>
+                        <div class="small_good">
+                            <a href=""><img src="img/搭配3.jpg" alt="">
+                                <h3> 小米4A 3英寸电视 </h3>
+                                <h5> 我是电视！！！</h5>
+                                <h4> ￥2999</h4>
+                            </a>
+                            <div>
+                                <i>昨天收到了物流真的超级好,就算是下雨天气也不会耽搁！！</i>
+                            </div>
+                        </div>
+
+
+                    </li>
+                    <li>
+                        <div class="small_good">
+                            <a href=""><img src="img/搭配3.jpg" alt="">
+                                <h3> 小米4A 3英寸电视 </h3>
+                                <h5> 我是电视！！！</h5>
+                                <h4> ￥2999</h4>
+                            </a>
+                            <div>
+                                <i>昨天收到了物流真的超级好,就算是下雨天气也不会耽搁！！</i>
+                            </div>
+                        </div>
+
+                        <div class="more">
+                            <a href=""><span><h3>小米智能插线板</h3><h4>￥1699</h4></span>    <img src="img/搭配4.jpg" alt=""></a>
+                            <a href=""><span><h3>浏览更多</h3><h4>电源</h4></span> <img src="img/更多.png" alt=""></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="rest_nav">
+            <div>
+                <h1>配件</h1>
+                <ul class="wrap">
+                    <li>
+                        <div class="small_good second">
+                            <img src="img/配件1.jpg" alt="">
+                        </div>
+                        <div class="small_good second">
+                            <img src="img/配件2.jpg" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="small_good">
+                            <a href=""><img src="img/配件3.jpg" alt="">
+                                <h3> 小米4A 3英寸电视 </h3>
+                                <h5> 我是电视！！！</h5>
+                                <h4> ￥2999</h4>
+                            </a>
+                            <div>
+                                <i>昨天收到了物流真的超级好,就算是下雨天气也不会耽搁！！</i>
+                            </div>
+                        </div>
+                        <div class="small_good">
+                            <a href=""><img src="img/配件3.jpg" alt="">
+                                <h3> 小米4A 3英寸电视 </h3>
+                                <h5> 我是电视！！！</h5>
+                                <h4> ￥2999</h4>
+                            </a>
+                            <div>
+                                <i>昨天收到了物流真的超级好,就算是下雨天气也不会耽搁！！</i>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li>
+
+                        <div class="small_good">
+                            <a href=""><img src="img/配件3.jpg" alt="">
+                                <h3> 小米4A 3英寸电视 </h3>
+                                <h5> 我是电视！！！</h5>
+                                <h4> ￥2999</h4>
+                            </a>
+                            <div>
+                                <i>昨天收到了物流真的超级好,就算是下雨天气也不会耽搁！！</i>
+                            </div>
+                        </div>
+                        <div class="small_good">
+                            <a href=""><img src="img/配件3.jpg" alt="">
+                                <h3> 小米4A 3英寸电视 </h3>
+                                <h5> 我是电视！！！</h5>
+                                <h4> ￥2999</h4>
+                            </a>
+                            <div>
+                                <i>昨天收到了物流真的超级好,就算是下雨天气也不会耽搁！！</i>
+                            </div>
+                        </div>
+
+
+                    </li>
+                    <li>
+
+                        <div class="small_good">
+                            <a href=""><img src="img/配件3.jpg" alt="">
+                                <h3> 小米4A 3英寸电视 </h3>
+                                <h5> 我是电视！！！</h5>
+                                <h4> ￥2999</h4>
+
+                            </a>
+                            <div>
+                                <i>昨天收到了物流真的超级好,就算是下雨天气也不会耽搁！！</i>
+                            </div>
+                        </div>
+                        <div class="small_good">
+                            <a href=""><img src="img/配件3.jpg" alt="">
+                                <h3> 小米4A 3英寸电视 </h3>
+                                <h5> 我是电视！！！</h5>
+                                <h4> ￥2999</h4>
+                            </a>
+                            <div>
+                                <i>昨天收到了物流真的超级好,就算是下雨天气也不会耽搁！！</i>
+                            </div>
+                        </div>
+
+
+                    </li>
+                    <li>
+                        <div class="small_good">
+                            <a href=""><img src="img/配件3.jpg" alt="">
+                                <h3> 小米4A 3英寸电视 </h3>
+                                <h5> 我是电视！！！</h5>
+                                <h4> ￥2999</h4>
+                            </a>
+                            <div>
+                                <i>昨天收到了物流真的超级好,就算是下雨天气也不会耽搁！！</i>
+                            </div>
+                        </div>
+
+                        <div class="more">
+                            <a href=""><span><h3>红米Note10智能保护</h3><h4>￥1699</h4></span>    <img src="img/配件4.jpg" alt=""></a>
+                            <a href=""><span><h3>浏览更多</h3><h4>保护套</h4></span> <img src="img/更多.png" alt=""></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="rest_nav">
+            <div>
+                <h1>周边</h1>
+                <ul class="wrap">
+                    <li>
+                        <div class="small_good second">
+                            <img src="img/周边1.jpg" alt="">
+                        </div>
+                        <div class="small_good second">
+                            <img src="img/周边2.jpg" alt="">
+                        </div>
+
+                    </li>
+                    <li>
+                        <div class="small_good">
+                            <a href=""><img src="img/周边3.jpg" alt="">
+                                <h3> 小米4A 3英寸电视 </h3>
+                                <h5> 我是电视！！！</h5>
+                                <h4> ￥2999</h4>
+                            </a>
+                            <div>
+                                <i>昨天收到了物流真的超级好,就算是下雨天气也不会耽搁！！</i>
+                            </div>
+                        </div>
+                        <div class="small_good">
+                            <a href=""><img src="img/周边3.jpg" alt="">
+                                <h3> 小米4A 3英寸电视 </h3>
+                                <h5> 我是电视！！！</h5>
+                                <h4> ￥2999</h4>
+                            </a>
+                            <div>
+                                <i>昨天收到了物流真的超级好,就算是下雨天气也不会耽搁！！</i>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li>
+
+                        <div class="small_good">
+                            <a href=""><img src="img/周边3.jpg" alt="">
+                                <h3> 小米4A 3英寸电视 </h3>
+                                <h5> 我是电视！！！</h5>
+                                <h4> ￥2999</h4>
+                            </a>
+                            <div>
+                                <i>昨天收到了物流真的超级好,就算是下雨天气也不会耽搁！！</i>
+                            </div>
+                        </div>
+                        <div class="small_good">
+                            <a href=""><img src="img/周边3.jpg" alt="">
+                                <h3> 小米4A 3英寸电视 </h3>
+                                <h5> 我是电视！！！</h5>
+                                <h4> ￥2999</h4>
+                            </a>
+                            <div>
+                                <i>昨天收到了物流真的超级好,就算是下雨天气也不会耽搁！！</i>
+                            </div>
+                        </div>
+
+
+                    </li>
+                    <li>
+
+                        <div class="small_good">
+                            <a href=""><img src="img/周边3.jpg" alt="">
+                                <h3> 小米4A 3英寸电视 </h3>
+                                <h5> 我是电视！！！</h5>
+                                <h4> ￥2999</h4>
+
+                            </a>
+                            <div>
+                                <i>昨天收到了物流真的超级好,就算是下雨天气也不会耽搁！！</i>
+                            </div>
+                        </div>
+                        <div class="small_good">
+                            <a href=""><img src="img/周边3.jpg" alt="">
+                                <h3> 小米4A 3英寸电视 </h3>
+                                <h5> 我是电视！！！</h5>
+                                <h4> ￥2999</h4>
+                            </a>
+                            <div>
+                                <i>昨天收到了物流真的超级好,就算是下雨天气也不会耽搁！！</i>
+                            </div>
+                        </div>
+
+
+                    </li>
+                    <li>
+                        <div class="small_good">
+                            <a href=""><img src="img/周边3.jpg" alt="">
+                                <h3> 小米4A 3英寸电视 </h3>
+                                <h5> 我是电视！！！</h5>
+                                <h4> ￥2999</h4>
+                            </a>
+                            <div>
+                                <i>昨天收到了物流真的超级好,就算是下雨天气也不会耽搁！！</i>
+                            </div>
+                        </div>
+
+                        <div class="more">
+                            <a href=""><span><h3>鼠标垫加大号</h3><h4>￥1699</h4></span>    <img src="img/周边3.jpg" alt=""></a>
+                            <a href=""><span><h3>浏览更多</h3><h4>生活周边</h4></span> <img src="img/更多.png" alt=""></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!--  热门商品开始部分  -->
+        <div class="item">
+
+            <div>
+                <h1>热评产品</h1>
+                <ul class="wrap">
+
+                    <li class="hot_item">
+                        <img src="img/热门产品.jpg" alt="">
+                        <p>样子好可爱，特别是转来转去时很有趣。让它休眠时它就会把头转过去背对着你了，唤醒它又会自动转回来。你</p>
+                        <h4>来自于 随风 的评价</h4>
+                        <span><h3>米家小白智能摄像机 </h3> | <h3> ￥399</h3></span>
+                    </li>
+                    <li class="hot_item">
+                        <img src="img/热门产品.jpg" alt="">
+                        <p>样子好可爱，特别是转来转去时很有趣。让它休眠时它就会把头转过去背对着你了，唤醒它又会自动转回来。你</p>
+                        <h4>来自于 随风 的评价</h4>
+                        <span><h3>米家小白智能摄像机 </h3> | <h3> ￥399</h3></span>
+                    </li>
+                    <li class="hot_item">
+                        <img src="img/热门产品.jpg" alt="">
+                        <p>样子好可爱，特别是转来转去时很有趣。让它休眠时它就会把头转过去背对着你了，唤醒它又会自动转回来。你</p>
+                        <h4>来自于 随风 的评价</h4>
+                        <span><h3>米家小白智能摄像机 </h3> | <h3> ￥399</h3></span>
+                    </li>
+                    <li class="hot_item">
+                        <img src="img/热门产品.jpg" alt="">
+                        <p>样子好可爱，特别是转来转去时很有趣。让它休眠时它就会把头转过去背对着你了，唤醒它又会自动转回来。你</p>
+                        <h4>来自于 随风 的评价</h4>
+                        <span><h3>米家小白智能摄像机 </h3> | <h3> ￥399</h3></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="item">
+            <div>
+                <h1>为你推荐</h1>
+                <ul class="wrap">
+                    <li class="for_you">
+                        <img src="img/为你推荐.jpg" alt="">
+                        <h3>小米无人机4k版套装</h3>
+                        <h4>2599元</h4>
+                        <h5>666人好评</h5>
+                    </li>
+                    <li class="for_you">
+                        <img src="img/为你推荐.jpg" alt="">
+                        <h3>小米无人机4k版套装</h3>
+                        <h4>2599元</h4>
+                        <h5>666人好评</h5>
+                    </li>
+                    <li class="for_you">
+                        <img src="img/为你推荐.jpg" alt="">
+                        <h3>小米无人机4k版套装</h3>
+                        <h4>2599元</h4>
+                        <h5>666人好评</h5>
+                    </li>
+                    <li class="for_you">
+                        <img src="img/为你推荐.jpg" alt="">
+                        <h3>小米无人机4k版套装</h3>
+                        <h4>2599元</h4>
+                        <h5>666人好评</h5>
+                    </li>
+                    <li class="for_you">
+                        <img src="img/为你推荐.jpg" alt="">
+                        <h3>小米无人机4k版套装</h3>
+                        <h4>2599元</h4>
+                        <h5>666人好评</h5>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="item">
+
+            <div>
+                <h1>热评产品</h1>
+                <ul class="wrap">
+
+                    <li class="hot_item" id="content">
+                        <p>游戏</p>
+                        <h4>米柚手游模拟器</h4>
+                        <span><h3>在电脑上玩变所有手游 </h3>  <h3> 免费</h3></span>
+                        <img src="img/内容.png" alt="">
+                    </li>
+                    <li class="hot_item" id="content">
+                        <p>游戏</p>
+                        <h4>米柚手游模拟器</h4>
+                        <span><h3>在电脑上玩变所有手游 </h3>  <h3> 免费</h3></span>
+                        <img src="img/内容.png" alt="">
+                    </li>
+                    <li class="hot_item" id="content">
+                        <p>游戏</p>
+                        <h4>米柚手游模拟器</h4>
+                        <span><h3>在电脑上玩变所有手游 </h3>  <h3> 免费</h3></span>
+                        <img src="img/内容.png" alt="">
+                    </li>
+                    <li class="hot_item" id="content">
+                        <p>游戏</p>
+                        <h4>米柚手游模拟器</h4>
+                        <span><h3>在电脑上玩变所有手游 </h3>  <h3> 免费</h3></span>
+                        <img src="img/内容.png" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="item">
+            <div>
+                <h1>视频</h1>
+                <ul class="wrap">
+                    <li class="video">
+                        <img src="img/雷军.jpg" alt="">
+                        <i>></i>
+                        <h3>听雷总讲述小米七年工艺探索</h3>
+                        <h4>小米6，7年工艺探索的巅峰之作</h4>
+                    </li>
+                    <li class="video">
+                        <img src="img/雷军.jpg" alt="">
+                        <i>></i>
+                        <h3>听雷总讲述小米七年工艺探索</h3>
+                        <h4>小米6，7年工艺探索的巅峰之作</h4>
+                    </li>
+                    <li class="video">
+                        <img src="img/雷军.jpg" alt="">
+                        <i>></i>
+                        <h3>听雷总讲述小米七年工艺探索</h3>
+                        <h4>小米6，7年工艺探索的巅峰之作</h4>
+                    </li>
+                    <li class="video">
+                        <img src="img/雷军.jpg" alt="">
+                        <i>></i>
+                        <h3>听雷总讲述小米七年工艺探索</h3>
+                        <h4>小米6，7年工艺探索的巅峰之作</h4>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--  热门商品结束部分  -->
+    <!-- 剩余商品部分开始 -->
+    <!-- 页脚部分开始 -->
+    <div class="footer">
+        <div class="wrap">
+            <!-- 页脚服务部分开始 -->
+            <div class="service">
+                <ul>
+                    <li><a href="#"><i class="iconfont" >&#xe7f2;</i>预约维修服务</a></li>
+                    <li><a href="#"><i class="iconfont">&#xe601;</i>7天无理由退货</a></li>
+                    <li><a href="#"><i class="iconfont">&#xe606;</i>15天免费换货</a></li>
+                    <li><a href="#"><i class="iconfont">&#xe8b5;</i>满69包邮</a></li>
+                    <li><a href="#"><i class="iconfont">&#xe63f;</i>520余家售后网点</a></li>
+                </ul>
+            </div>
+            <!-- 页脚服务部分结束 -->
+            <!-- 页脚链接部分开始 -->
+            <div class="footer-link">
+                <ul>
+                    <li>帮助中心</li>
+                    <li><a href="#">账户管理</a></li>
+                    <li><a href="#">购物指南</a></li>
+                    <li><a href="#">订单操作</a></li>
+                </ul>
+                <ul>
+                    <li>服务支持</li>
+                    <li><a href="#">售后政策</a></li>
+                    <li><a href="#">自助服务</a></li>
+                    <li><a href="#">相关下载</a></li>
+                </ul>
+                <ul>
+                    <li>线下门店</li>
+                    <li><a href="#">小米之家</a></li>
+                    <li><a href="#">服务网点</a></li>
+                    <li><a href="#">授权体验店</a></li>
+                </ul>
+                <ul>
+                    <li>关于小米</li>
+                    <li><a href="#">了解小米</a></li>
+                    <li><a href="#">加入小米</a></li>
+                    <li><a href="#">联系我们</a></li>
+
+                </ul>
+                <ul>
+                    <li>关注我们</li>
+                    <li><a href="#">新浪微博</a></li>
+                    <li><a href="#">小米部落</a></li>
+                    <li><a href="#">官方微信</a></li>
+
+                </ul>
+                <ul>
+                    <li>特色服务</li>
+                    <li><a href="#">F码通道</a></li>
+                    <li><a href="#">礼物码</a></li>
+                    <li><a href="#">防伪查询</a></li>
+                </ul>
+                <div class="footer-link-right">
+                    <p class="phone-number">400-100-5678</p>
+                    <p class="worktime">周一☞周日8:00-18:00</p>
+                    <h5>（仅收市话费）</h5>
+                    <a href="#"><i ></i>24小时在线客服</a>
+
+                </div>
+            </div>
+            <!-- 页脚链接部分结束 -->
+        </div>
+    </div>
+    <div class="footer-last">
+        <div class="wrap">
+            <div class="footer-contain">
+                <img src="https://s02.mifile.cn/assets/static/image/logo-mi2.png" alt="logo">
+                <div class="footer-contain-main">
+                    <div class="footer-contain-link">
+                        <ul>
+                            <li><a href="#">小米商城</a><span>|</span></li>
+                            <li><a href="#">MIUI</a><span>|</span></li>
+                            <li><a href="#">米家</a><span>|</span></li>
+                            <li><a href="#">米聊</a><span>|</span></li>
+                            <li><a href="#">多看书城</a><span>|</span></li>
+                            <li><a href="#">小米路由器</a><span>|</span></li>
+                            <li><a href="#">视频电话</a><span>|</span></li>
+                            <li><a href="#">小米天猫店</a><span>|</span></li>
+                            <li><a href="#">小米淘宝直营店</a><span>|</span></li>
+                            <li><a href="#">小米网盟</a><span>|</span></li>
+                            <li><a href="#">小米移动</a><span>|</span></li>
+                            <li><a href="#">隐私政策</a><span>|</span></li>
+                            <li><a href="#">问题反馈</a><span>|</span></li>
+                            <li><a href="#">Select Location</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="footer-contain-content">
+                        <p>
+                            © <a href="#">mi.com</a>
+                            <a href="#">京ICP证110507号</a>
+                            <a href="#">京ICP备10046444号</a>
+                            <a href="#">京公网安备11010802020134号</a>
+                            <a href="#">京网文[2014]0059-0009号</a>
+                            <br>
+                            <a href="#">违法和不良信息举报电话</a>
+                            <a href="#">185-0130-1238</a>
+                            <a href="#">本网站所列数据，除特殊说明所有数据均出自我司实验室测试</a>
+
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 页脚部分结束 -->
+
+
+
+
+
+</body>
+
+</html>
