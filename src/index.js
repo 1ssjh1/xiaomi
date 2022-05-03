@@ -6,10 +6,7 @@ import "./font_3207587_zixofqh46on/iconfont.ttf"
 import "./font_3207587_zixofqh46on/iconfont.woff"
 import "./font_3207587_zixofqh46on/iconfont.woff2"
 
-// import img2 from "../src/img/slide2.jpg"
-// import img1 from "../src/img/slide1.jpg"
-// import img3 from "../src/img/slide3.jpg"
-// import img4 from "../src/img/slide4.jpg"
+
 // 确认状态 单页面操作
 new_state();
 

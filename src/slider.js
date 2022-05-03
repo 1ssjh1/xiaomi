@@ -1,8 +1,5 @@
-// import "./slider.css"
-// import img2 from "./img/slide2.jpg"
-// import img1 from "./img/slide1.jpg"
-// import img3 from "./img/slide3.jpg"
-// import img4 from "./img/slide4.jpg"
+import "./slider.css"
+
 class PubSub {
     static = {};
     on(key, fn) {
@@ -278,24 +275,16 @@ const previousPlugin = {
 
 
 
-// require("./img/slide1.jpg")
-require("./img/slide2.jpg")
-    // require("./img/slide3.jpg")
-    // require("./img/slide4.jpg")
 
 
-// let imgs = [require("./img/slide1.jpg"),
-//     require("./img/slide2.jpg"),
-//     require("./img/slide3.jpg"),
-//     require("./img/slide4.jpg")
-// ]
+let imgs = [require("./img/slide1.jpg"),
+    require("./img/slide2.webp"),
+    require("./img/slide3.webp"),
+    require("./img/slide4.webp")
+]
 
 
-// let imgs = ["./src/img/slide1.jpg",
-//     "./src/img/slide2.webp",
-//     "./src/img/slide3.webp",
-//     "./src/img/slide4.webp"
-// ]
+
 const slider = new Slider(
     "slider",
     2000, {

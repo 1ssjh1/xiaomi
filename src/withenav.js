@@ -1,3 +1,30 @@
+// let temp = 1
+// const fs = require__("fs")
+
+// console.log(fs);
+// while (fs.readFile(`./img/wihtenav${temp}.png`, (err, data) => {
+//         if (err) return false
+//         else return true
+//     })) {
+//     require(`./img/wihtenav${temp}.png`)
+//     temp++;------
+// }
+// let str = '<h1>Hello, world!</h1>';
+
+
+// let matchAll = str.match(/\/(.*?)/g);
+
+const file = require.context("./img", true, /(wihtenav)/)
+    // console.log(file);
+    // console.log(file.keys().default);
+    // console.log(file.keys()[0]);
+
+// console.log("./wihtenav1.png".replace(/\./, ""))
+
+
+file.keys().forEach(item => {
+    require("./img" + item.replace(/\./, ""))
+})
 let withe_nav = [{
 
         img: "./src/img/wihtenav1.png",
@@ -126,7 +153,7 @@ let withe_nav = [{
     }
 
 ]
-console.log(withe_nav[0].img);
+
 
 function _nav() {
     let price = withe_nav.map((e, i) => {
@@ -144,7 +171,7 @@ function _nav() {
             x++
             e.insertAdjacentHTML("beforeend", `    <li>
             <a href="#">
-                <img src="./src/img/wihtenav${x+index}.png" alt="">
+                <img src="./img/wihtenav${x+index}.png" alt="">
                 <p class="name">${price[x+index-1]}</p>
                 <p class="price">${name[x+index-1]}</p>
                 <div class="new">新品</div>

@@ -5,6 +5,14 @@
     box-sizing: border-box;
 }
 
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 body,
 h1,
 h2,
@@ -1037,7 +1045,7 @@ h1 {
 }
 
 .rest_nav .wrap li .first {
-    background: url(img/%E5%AE%B6%E7%94%B51.jpg);
+    background: url(../img/%E5%AE%B6%E7%94%B51.jpg);
     overflow: visible;
     height: 100%;
 }
@@ -1250,6 +1258,121 @@ h1 {
 .car_goods li img {
     width: 50px;
     height: 50px;
+}
+/*!******************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/slider.css ***!
+  \******************************************************************/
+/* 基础样式 */
+
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+}
+
+
+/* 轮播图 */
+
+.slider-list {
+    width: 100%;
+    height: 100%;
+}
+
+.slider-list-item,
+.slider-list-item-selected {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: opacity 1.5s;
+    opacity: 0;
+}
+
+.slider-list-item-selected {
+    opacity: 1;
+}
+
+.slider-list-item>img,
+.slider-list-item-selected>img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 轮播图控制器 */
+
+.slider-list-control {
+    position: absolute;
+    width: 15%;
+    height: 7.5%;
+    border-radius: 4%;
+    background-color: rgba(104, 102, 102, 0.5);
+    z-index: 5;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    left: 42.5%;
+    bottom: 2%;
+}
+
+.slider-list-control-button,
+.slider-list-control-button-selected {
+    transition: background-color 0.6s;
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+    cursor: pointer;
+}
+
+.slider-list-control-button {
+    background-color: white;
+}
+
+.slider-list-control-button-selected {
+    background-color: pink;
+}
+
+.slider-list-control-button:hover {
+    background-color: pink;
+}
+
+
+/* 轮播图前后控制器 */
+
+.slider-list-previous,
+.slider-list-next {
+    position: absolute;
+    width: 20px;
+    height: 20%;
+    z-index: 5;
+    top: 40%;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(20, 19, 19, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-list-previous>p,
+.slider-list-next>p {
+    margin: 0;
+}
+
+.slider-list-previous {
+    left: 0;
+}
+
+.slider-list-next {
+    right: 0;
 }
 
 /*# sourceMappingURL=main.css.map*/

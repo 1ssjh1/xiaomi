@@ -1,4 +1,11 @@
 import { new_state, login_or_register, post_data } from "./module.js"
+import "./same.css"
+import "./command.css"
+import "./login&register.css"
+// import "./iconfont.css"
+import "./font_3207587_zixofqh46on/iconfont.ttf"
+import "./font_3207587_zixofqh46on/iconfont.woff"
+import "./font_3207587_zixofqh46on/iconfont.woff2"
 
 new_state()
 

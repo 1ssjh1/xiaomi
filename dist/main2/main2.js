@@ -1,5 +1,4 @@
-/******/ (() => { // webpackBootstrap
-/******/ 	var __webpack_modules__ = ({
+(self["webpackChunk"] = self["webpackChunk"] || []).push([["main2"],{
 
 /***/ "./node_modules/@babel/runtime/regenerator/index.js":
 /*!**********************************************************!*\
@@ -9,6 +8,125 @@
 
 module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/regenerator-runtime/runtime.js");
 
+
+/***/ }),
+
+/***/ "./src/login&register.js":
+/*!*******************************!*\
+  !*** ./src/login&register.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _module_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./module.js */ "./src/module.js");
+/* harmony import */ var _same_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./same.css */ "./src/same.css");
+/* harmony import */ var _command_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./command.css */ "./src/command.css");
+/* harmony import */ var _login_register_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./login&register.css */ "./src/login&register.css");
+/* harmony import */ var _font_3207587_zixofqh46on_iconfont_ttf__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./font_3207587_zixofqh46on/iconfont.ttf */ "./src/font_3207587_zixofqh46on/iconfont.ttf");
+/* harmony import */ var _font_3207587_zixofqh46on_iconfont_woff__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./font_3207587_zixofqh46on/iconfont.woff */ "./src/font_3207587_zixofqh46on/iconfont.woff");
+/* harmony import */ var _font_3207587_zixofqh46on_iconfont_woff2__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./font_3207587_zixofqh46on/iconfont.woff2 */ "./src/font_3207587_zixofqh46on/iconfont.woff2");
+
+
+
+
+
+ // import "./iconfont.css"
+
+
+
+
+(0,_module_js__WEBPACK_IMPORTED_MODULE_2__.new_state)();
+(0,_module_js__WEBPACK_IMPORTED_MODULE_2__.login_or_register)(); // 注册账号
+
+var register_list = document.querySelector("#register").querySelectorAll('input[type="text"]'),
+    register_btn = document.querySelector("#register").querySelector('input[type="button"]');
+register_btn.addEventListener("click", function (e) {
+  console.log(1);
+  e.preventDefault();
+  var username = register_list[0].value,
+      password = register_list[1].value,
+      name = register_list[2].value;
+  var data = {
+    username: username,
+    password: password,
+    name: name
+  };
+
+  (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee() {
+    var res;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            _context.next = 2;
+            return (0,_module_js__WEBPACK_IMPORTED_MODULE_2__.post_data)("register", data);
+
+          case 2:
+            res = _context.sent;
+            alert(res.message);
+            console.log(res);
+
+          case 5:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }))();
+}); // 登陆账号
+
+var login_list = document.querySelector("#login").querySelectorAll('input[type="text"]'),
+    login_btn = document.querySelector("#login").querySelector('input[type="button"]'),
+    login_check = document.querySelector("#login").querySelector('input[type="checkbox"]');
+login_btn.addEventListener("click", function (e) {
+  e.preventDefault();
+  var auth = "";
+
+  if (login_check.checked == true) {
+    auth = "admin";
+  } else {
+    auth = "user";
+  }
+
+  var username = login_list[0].value,
+      password = login_list[1].value;
+  var data = {
+    username: username,
+    password: password,
+    auth: auth
+  };
+
+  (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee2() {
+    var res;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            _context2.next = 2;
+            return (0,_module_js__WEBPACK_IMPORTED_MODULE_2__.post_data)("login", data);
+
+          case 2:
+            res = _context2.sent;
+            alert(res.message);
+
+            if (res.state) {
+              localStorage.setItem("token", res.token);
+              localStorage.setItem("auth", res.auth);
+              window.location.href = '../index.html';
+            }
+
+          case 5:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, _callee2);
+  }))();
+});
 
 /***/ }),
 
@@ -211,6 +329,45 @@ function my_AJAX(url, _methods, _data) {
     }
   });
 }
+
+/***/ }),
+
+/***/ "./src/command.css":
+/*!*************************!*\
+  !*** ./src/command.css ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/login&register.css":
+/*!********************************!*\
+  !*** ./src/login&register.css ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/same.css":
+/*!**********************!*\
+  !*** ./src/same.css ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
 
 /***/ }),
 
@@ -978,45 +1135,36 @@ try {
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js ***!
-  \*********************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+/***/ "./src/font_3207587_zixofqh46on/iconfont.ttf":
+/*!***************************************************!*\
+  !*** ./src/font_3207587_zixofqh46on/iconfont.ttf ***!
+  \***************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _arrayLikeToArray)
-/* harmony export */ });
-function _arrayLikeToArray(arr, len) {
-  if (len == null || len > arr.length) len = arr.length;
-
-  for (var i = 0, arr2 = new Array(len); i < len; i++) {
-    arr2[i] = arr[i];
-  }
-
-  return arr2;
-}
+module.exports = __webpack_require__.p + "font/iconfont.550aac.ttf";
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js ***!
-  \**********************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+/***/ "./src/font_3207587_zixofqh46on/iconfont.woff":
+/*!****************************************************!*\
+  !*** ./src/font_3207587_zixofqh46on/iconfont.woff ***!
+  \****************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _arrayWithoutHoles)
-/* harmony export */ });
-/* harmony import */ var _arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayLikeToArray.js */ "./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js");
+module.exports = __webpack_require__.p + "font/iconfont.9889df.woff";
 
-function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) return (0,_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__["default"])(arr);
-}
+/***/ }),
+
+/***/ "./src/font_3207587_zixofqh46on/iconfont.woff2":
+/*!*****************************************************!*\
+  !*** ./src/font_3207587_zixofqh46on/iconfont.woff2 ***!
+  \*****************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "font/iconfont.f6bd3d.woff2";
 
 /***/ }),
 
@@ -1067,386 +1215,12 @@ function _asyncToGenerator(fn) {
   };
 }
 
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/iterableToArray.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/iterableToArray.js ***!
-  \********************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _iterableToArray)
-/* harmony export */ });
-function _iterableToArray(iter) {
-  if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter);
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js ***!
-  \**********************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _nonIterableSpread)
-/* harmony export */ });
-function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js ***!
-  \**********************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _toConsumableArray)
-/* harmony export */ });
-/* harmony import */ var _arrayWithoutHoles_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayWithoutHoles.js */ "./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js");
-/* harmony import */ var _iterableToArray_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./iterableToArray.js */ "./node_modules/@babel/runtime/helpers/esm/iterableToArray.js");
-/* harmony import */ var _unsupportedIterableToArray_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./unsupportedIterableToArray.js */ "./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js");
-/* harmony import */ var _nonIterableSpread_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./nonIterableSpread.js */ "./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js");
-
-
-
-
-function _toConsumableArray(arr) {
-  return (0,_arrayWithoutHoles_js__WEBPACK_IMPORTED_MODULE_0__["default"])(arr) || (0,_iterableToArray_js__WEBPACK_IMPORTED_MODULE_1__["default"])(arr) || (0,_unsupportedIterableToArray_js__WEBPACK_IMPORTED_MODULE_2__["default"])(arr) || (0,_nonIterableSpread_js__WEBPACK_IMPORTED_MODULE_3__["default"])();
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js":
-/*!*******************************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js ***!
-  \*******************************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _unsupportedIterableToArray)
-/* harmony export */ });
-/* harmony import */ var _arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayLikeToArray.js */ "./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js");
-
-function _unsupportedIterableToArray(o, minLen) {
-  if (!o) return;
-  if (typeof o === "string") return (0,_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__["default"])(o, minLen);
-  var n = Object.prototype.toString.call(o).slice(8, -1);
-  if (n === "Object" && o.constructor) n = o.constructor.name;
-  if (n === "Map" || n === "Set") return Array.from(o);
-  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return (0,_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__["default"])(o, minLen);
-}
-
 /***/ })
 
-/******/ 	});
-/************************************************************************/
-/******/ 	// The module cache
-/******/ 	var __webpack_module_cache__ = {};
-/******/ 	
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/ 		// Check if module is in cache
-/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
-/******/ 		if (cachedModule !== undefined) {
-/******/ 			return cachedModule.exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
-/******/ 			// no module.loaded needed
-/******/ 			exports: {}
-/******/ 		};
-/******/ 	
-/******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/ 	
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/ 	
-/************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
-/******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = (exports) => {
-/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 			}
-/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/************************************************************************/
-var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
-(() => {
-"use strict";
-var __webpack_exports__ = {};
-/*!******************************!*\
-  !*** ./src/login&regiter.js ***!
-  \******************************/
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _module_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./module.js */ "./src/module.js");
-
-
-
-(0,_module_js__WEBPACK_IMPORTED_MODULE_2__.new_state)();
-(0,_module_js__WEBPACK_IMPORTED_MODULE_2__.login_or_register)(); // 注册账号
-
-var register_list = document.querySelector("#register").querySelectorAll('input[type="text"]'),
-    register_btn = document.querySelector("#register").querySelector('input[type="button"]');
-register_btn.addEventListener("click", function (e) {
-  console.log(1);
-  e.preventDefault();
-  var username = register_list[0].value,
-      password = register_list[1].value,
-      name = register_list[2].value;
-  var data = {
-    username: username,
-    password: password,
-    name: name
-  };
-
-  (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee() {
-    var res;
-    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            _context.next = 2;
-            return (0,_module_js__WEBPACK_IMPORTED_MODULE_2__.post_data)("register", data);
-
-          case 2:
-            res = _context.sent;
-            alert(res.message);
-            console.log(res);
-
-          case 5:
-          case "end":
-            return _context.stop();
-        }
-      }
-    }, _callee);
-  }))();
-}); // 登陆账号
-
-var login_list = document.querySelector("#login").querySelectorAll('input[type="text"]'),
-    login_btn = document.querySelector("#login").querySelector('input[type="button"]'),
-    login_check = document.querySelector("#login").querySelector('input[type="checkbox"]');
-login_btn.addEventListener("click", function (e) {
-  e.preventDefault();
-  var auth = "";
-
-  if (login_check.checked == true) {
-    auth = "admin";
-  } else {
-    auth = "user";
-  }
-
-  var username = login_list[0].value,
-      password = login_list[1].value;
-  var data = {
-    username: username,
-    password: password,
-    auth: auth
-  };
-
-  (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee2() {
-    var res;
-    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function _callee2$(_context2) {
-      while (1) {
-        switch (_context2.prev = _context2.next) {
-          case 0:
-            _context2.next = 2;
-            return (0,_module_js__WEBPACK_IMPORTED_MODULE_2__.post_data)("login", data);
-
-          case 2:
-            res = _context2.sent;
-            alert(res.message);
-
-            if (res.state) {
-              localStorage.setItem("token", res.token);
-              localStorage.setItem("auth", res.auth);
-              window.location.href = '../index.html';
-            }
-
-          case 5:
-          case "end":
-            return _context2.stop();
-        }
-      }
-    }, _callee2);
-  }))();
-});
-})();
-
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
-(() => {
-"use strict";
-/*!*************************!*\
-  !*** ./src/withenav.js ***!
-  \*************************/
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
-
-var withe_nav = [{
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "0元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "2499元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "2499元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "2499元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "2499元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "2499元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "2499元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "2499元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "2499元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "2499元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "2499元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "2499元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "2499元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "2499元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "2499元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "2499元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "2499元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "2499元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "2499元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "9999元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "9999元起送"
-}];
-console.log(withe_nav[0].img);
-
-function _nav() {
-  var price = withe_nav.map(function (e, i) {
-    return e.price;
-  });
-  var name = withe_nav.map(function (e, i) {
-    return e.price;
-  });
-
-  var li_list = (0,_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(document.querySelectorAll(".nav_bottom"));
-
-  console.log(li_list);
-  var x = 0;
-  li_list.forEach(function (e, index) {
-    for (var i = 0; i < 3; i++) {
-      x++;
-      e.insertAdjacentHTML("beforeend", "    <li>\n            <a href=\"#\">\n                <img src=\"./src/img/wihtenav".concat(x + index, ".png\" alt=\"\">\n                <p class=\"name\">").concat(price[x + index - 1], "</p>\n                <p class=\"price\">").concat(name[x + index - 1], "</p>\n                <div class=\"new\">\u65B0\u54C1</div>\n            </a>\n        </li>\n        <div class=\"fenge\"></div>"));
-    }
-
-    x--;
-  });
-}
-
-_nav();
-})();
-
-/******/ })()
-;
+},
+/******/ __webpack_require__ => { // webpackRuntimeModules
+/******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+/******/ var __webpack_exports__ = (__webpack_exec__("./src/login&register.js"));
+/******/ }
+]);
 //# sourceMappingURL=main2.js.map

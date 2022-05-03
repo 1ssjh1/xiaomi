@@ -1,5 +1,4 @@
-/******/ (() => { // webpackBootstrap
-/******/ 	var __webpack_modules__ = ({
+(self["webpackChunk"] = self["webpackChunk"] || []).push([["main"],{
 
 /***/ "./node_modules/@babel/runtime/regenerator/index.js":
 /*!**********************************************************!*\
@@ -9,6 +8,306 @@
 
 module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/regenerator-runtime/runtime.js");
 
+
+/***/ }),
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _module_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./module.js */ "./src/module.js");
+/* harmony import */ var _command_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./command.css */ "./src/command.css");
+/* harmony import */ var _same_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./same.css */ "./src/same.css");
+/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./index.css */ "./src/index.css");
+/* harmony import */ var _font_3207587_zixofqh46on_iconfont_ttf__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./font_3207587_zixofqh46on/iconfont.ttf */ "./src/font_3207587_zixofqh46on/iconfont.ttf");
+/* harmony import */ var _font_3207587_zixofqh46on_iconfont_woff__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./font_3207587_zixofqh46on/iconfont.woff */ "./src/font_3207587_zixofqh46on/iconfont.woff");
+/* harmony import */ var _font_3207587_zixofqh46on_iconfont_woff2__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./font_3207587_zixofqh46on/iconfont.woff2 */ "./src/font_3207587_zixofqh46on/iconfont.woff2");
+
+
+
+
+
+
+
+
+ // 确认状态 单页面操作
+
+(0,_module_js__WEBPACK_IMPORTED_MODULE_2__.new_state)();
+
+function user() {
+  var user = document.querySelector(".user");
+
+  if (localStorage.getItem("token")) {
+    user.children[0].remove();
+    user.children[1].remove();
+    user.insertAdjacentHTML("afterbegin", " \n        \n        <li> <a href = \"javascript:;\" class = \"login_btn\" >\u6B22\u8FCE\u60A8\uFF01</a><span>|</span ></li> \n        <li><a href = \"javascript:;\" class = \"login_btn\" id=\"over\" >\u9000\u51FA</a><span>|</span ></li>");
+    var over = document.querySelector("#over");
+    over.addEventListener("click", function () {
+      localStorage.clear();
+      window.location.reload();
+    });
+  }
+}
+
+user(); // 购物车
+
+function car() {
+  return _car.apply(this, arguments);
+} // car();
+// 购物车
+// // 生成 所有商品
+// ;
+// (async() => {
+//     let goods = document.querySelector(".goods")
+//     let res = await post_goods("shopData")
+//     res.forEach((e, index) => {
+//         goods.insertAdjacentHTML("beforeend",
+//             ` <li id="${index}">
+//             <a href="javascript:;"><img src="${e.imageUrl}" alt="">
+//              <div class="now_buy"> 立 即 购 买</div>
+//              <ul  style="display: none;">
+//                 <li>${e.id}</li>
+//                 <li>${e.imageUrl}</li>
+//                 <li>${e.name}</li>
+//                 <li>${e.brand}</li>
+//                 <li>${e.sales}</li>
+//                 <li>${e.color}</li>
+//                 <li>${e.cost}</li>
+//               </ul>
+//                 <h3>商品名: ${e.name} </h3>
+//                 <h3>品牌名:${e.brand}</h3>
+//                 <h3>初始销量:${e.sales}</h3>
+//                 <h5>颜色:${e.color}</h5>
+//                 <h4>$${e.cost}</h4>
+//               </a>
+//            </li>`)
+//     });
+//     // 加入购物车
+//     goods.addEventListener("click", (e) => {
+//             if (e.target.className == "now_buy") {
+//                 let arr_goods = [...e.target.nextElementSibling.children],
+//                     data = {
+//                         id: arr_goods[0].innerText,
+//                         name: arr_goods[2].innerText,
+//                         brand: arr_goods[3].innerText,
+//                         imageUrl: arr_goods[1].innerText,
+//                         sales: arr_goods[4].innerText,
+//                         cost: arr_goods[6].innerText,
+//                         color: arr_goods[5].innerText,
+//                     }
+//                 ;
+//                 // (async() => {
+//                 //     let res = await post_buy("addCartData", localStorage.getItem("token"), data)
+//                 //     alert(res.message)
+//                 //     console.log(res);
+//                 // })()
+//                 axios({
+//                     url: "http://180.76.185.37:3000/addCartData",
+//                     method: "post",
+//                     data: {
+//                         token: localStorage.getItem("token"),
+//                         data: data
+//                     },
+//                 }).then((res) => {
+//                     console.log(res.data);
+//                     alert(res.data.message)
+//                 });
+//             }
+//         })
+//         // 加入购物车
+// })()
+// 生成 所有商品
+
+
+function _car() {
+  _car = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee2() {
+    var start, data, res, _car2, car_number, temp_number, shopping_car;
+
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            if (!localStorage.getItem("token")) {
+              _context2.next = 16;
+              break;
+            }
+
+            // 清除 原有数据
+            start = document.querySelector(".start");
+            start.remove(); //生成购物车
+
+            data = {
+              token: localStorage.getItem("token")
+            };
+            _context2.next = 6;
+            return (0,_module_js__WEBPACK_IMPORTED_MODULE_2__.my_AJAX)("http://180.76.185.37:3000/shopData", "POST", data);
+
+          case 6:
+            res = _context2.sent;
+            _car2 = document.querySelector(".car_goods");
+            car_number = document.querySelector(".car_number");
+            temp_number = 0;
+            res.forEach(function (e) {
+              _car2.insertAdjacentHTML("beforeend", "  <li>\n                 <span><img src=\"".concat(e.imageUrl, "\" alt=\"\"> \n                 </span> <span><i>").concat(e.name, "</i></span> \n                 <span><a href=\"javascript:void(0);\">\u5220\u9664</a></span> \n                 <span style=\"display:none\">").concat(e.id, "</span> \n                 </li>"));
+
+              temp_number++;
+            }); //生成购物车
+            //购物车 数量
+
+            car_number.innerHTML = temp_number; //购物车 数量
+            //购物车  长度生成
+
+            shopping_car = document.querySelector(".shopping_car");
+            shopping_car.addEventListener("mouseenter", function demo() {
+              this.children[1].style.height = temp_number * 30 + "px";
+            }, false);
+            shopping_car.addEventListener("mouseleave", function demo() {
+              this.children[1].style.height = 0;
+            }, false); //购物车  长度生成
+            // 删除购物车
+
+            _car2.addEventListener("click", function demo(e) {
+              if (e.target.tagName == "A") {
+                ;
+
+                (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee() {
+                  var data, res;
+                  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function _callee$(_context) {
+                    while (1) {
+                      switch (_context.prev = _context.next) {
+                        case 0:
+                          data = {
+                            token: localStorage.getItem("token"),
+                            id: e.target.parentElement.nextElementSibling.innerHTML
+                          };
+                          _context.next = 3;
+                          return (0,_module_js__WEBPACK_IMPORTED_MODULE_2__.my_AJAX)('http://180.76.185.37:3000/deleteCartData', "POST", data);
+
+                        case 3:
+                          res = _context.sent;
+                          console.log(res);
+
+                          if (res.state == 1) {
+                            alert(res.message);
+                          }
+
+                          e.target.parentNode.parentNode.remove();
+
+                        case 7:
+                        case "end":
+                          return _context.stop();
+                      }
+                    }
+                  }, _callee);
+                }))();
+              }
+            }); // 删除购物车
+            //fetch  跨域为啥？
+            // (async() => {
+            //     let res = await post_data("getCartData", localStorage.getItem("token"))
+            //     console.log(res);
+            // })()
+
+
+          case 16:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, _callee2);
+  }));
+  return _car.apply(this, arguments);
+}
+
+/***/ }),
+
+/***/ "./src/leftnav.js":
+/*!************************!*\
+  !*** ./src/leftnav.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
+
+
+var file = __webpack_require__("./src/img sync recursive (left_nav)");
+
+file.keys().forEach(function (item) {
+  __webpack_require__("./src sync recursive ^\\.\\/img.*$")("./img" + item.replace(/\./, ""));
+});
+var arr = [{
+  src: "./img/left_nav1.png",
+  name: "小米 5 plus max",
+  number: 8
+}, {
+  src: "./img/left_nav2.jpg",
+  name: "小米智能机顶盒",
+  number: 10
+}, {
+  src: "./img/left_nav3.jpg",
+  name: "小米笔记本电脑",
+  number: 12
+}, {
+  src: "./img/left_nav4.png",
+  name: "小米出行",
+  number: 8
+}, {
+  src: "./img/left_nav5.jpg",
+  name: "小米智能路由器",
+  number: 2
+}, {
+  src: "./img/left_nav6.jpg",
+  name: "小米 电源配件",
+  number: 8
+}, {
+  src: "./img/left_nav7.jpg",
+  name: "小米 健康儿童",
+  number: 8
+}, {
+  src: "./img/left_nav8.jpg",
+  name: "小米耳机音箱",
+  number: 20
+}, {
+  src: "./img/left_nav9.jpg",
+  name: "勤奋蜂6666",
+  number: 7
+}, {
+  src: "./img/left_nav10.jpg",
+  name: "小米生活背包",
+  number: 8
+}];
+var name = arr.map(function (e) {
+  return e.name;
+});
+var src = arr.map(function (e) {
+  return e.src;
+});
+var number = arr.map(function (e) {
+  return e.number;
+});
+
+var li_list = (0,_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(document.querySelector(".left_nav").querySelectorAll(".left_goods"));
+
+function insert() {
+  li_list.forEach(function (e, index) {
+    console.log(src[index]);
+
+    for (var i = 0; i < number[index]; i++) {
+      e.insertAdjacentHTML("afterbegin", " \n            <li>\n            <div>\n                <img src=\"".concat(src[index], "\" alt=\"\">\n                <i>").concat(name[index], "</i>\n            </div>            \n            </li>\n            "));
+    }
+  });
+}
+
+insert();
 
 /***/ }),
 
@@ -214,6 +513,302 @@ function my_AJAX(url, _methods, _data) {
 
 /***/ }),
 
+/***/ "./src/slider.js":
+/*!***********************!*\
+  !*** ./src/slider.js ***!
+  \***********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var _slider_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./slider.css */ "./src/slider.css");
+
+
+
+
+
+
+var PubSub = /*#__PURE__*/function () {
+  function PubSub() {
+    (0,_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, PubSub);
+
+    (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3__["default"])(this, "static", {});
+  }
+
+  (0,_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(PubSub, [{
+    key: "on",
+    value: function on(key, fn) {
+      if (this["static"][key]) {
+        this["static"][key].push(fn);
+      } else {
+        this["static"][key] = [fn];
+      }
+    }
+  }, {
+    key: "emit",
+    value: function emit(key) {
+      for (var _len = arguments.length, rest = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+        rest[_key - 1] = arguments[_key];
+      }
+
+      this["static"][key] && this["static"][key].forEach(function (fns) {
+        fns.apply(void 0, rest);
+      });
+    }
+  }]);
+
+  return PubSub;
+}();
+
+var Slider = /*#__PURE__*/function () {
+  function Slider(id) {
+    var cycle = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 3000;
+    var style = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+    var imgs = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : [];
+    var Plugins = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : [];
+
+    (0,_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, Slider);
+
+    //获取容器的dom
+    this.Plugin = Plugins;
+    this.key = true;
+    this.container = document.getElementById(id);
+    this.imgs = imgs;
+    this.cycle = cycle;
+    this.style = style;
+    this.registerPlugins();
+    this.begin();
+    this.items = Array.from(this.container.querySelectorAll(".slider-list-item-selected, .slider-list-item"));
+  }
+
+  (0,_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(Slider, [{
+    key: "registerPlugins",
+    value: function registerPlugins() {
+      var _this = this;
+
+      var template = this.render();
+      template = template + this.Plugin.reduce(function (result, items) {
+        return result += items.render(_this);
+      }, "");
+      this.container.innerHTML = template;
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var template = this.imgs.slice(1, this.imgs.length - 1).reduce(function (result, item, index) {
+        return result + "  \n            <li class=\"slider-list-item\">\n             <img src=\"".concat(item, "\" alt=\"\" />\n               </li>");
+      }, " <li class=\"slider-list-item-selected\">\n        <img src=\"".concat(this.imgs[0], "\" alt=\"\" />\n          </li>"));
+      return " \n        <ul class=\"slider-list\">\n        ".concat(template, "\n         </ul>");
+    }
+  }, {
+    key: "begin",
+    value: function begin() {
+      var _this2 = this;
+
+      this.render();
+      this.initStyle(this.style);
+      this.Plugin && this.Plugin.forEach(function (fns) {
+        fns.render(_this2);
+        fns.action(_this2);
+      });
+    }
+  }, {
+    key: "initStyle",
+    value: function initStyle(style) {
+      var _this3 = this;
+
+      Object.keys(style).forEach(function (key) {
+        _this3.setStyleAttribute(_this3.container, key, style[key]);
+      });
+      this.setStyleAttribute(this.container, "position", "relative"); // ????????????为啥要设置相对啊  感觉应该在 css中去设置
+    } // 设置 属性
+
+  }, {
+    key: "setStyleAttribute",
+    value: function setStyleAttribute(el, key, value) {
+      el.style[key] = value;
+    }
+  }, {
+    key: "getSelectedItemIndex",
+    value: function getSelectedItemIndex() {
+      return this.items.indexOf(this.getSelectedItem());
+    }
+  }, {
+    key: "getSelectedItem",
+    value: function getSelectedItem() {
+      //querySelectorAll会返回nodeList是一个类数组 forEach
+      return this.container.querySelector(".slider-list-item-selected");
+    }
+  }, {
+    key: "slideTo",
+    value: function slideTo(idx) {
+      var currentSelectedItem = this.getSelectedItem();
+
+      if (currentSelectedItem) {
+        currentSelectedItem.className = 'slider-list-item';
+      }
+
+      var selectedItem = this.items[idx];
+
+      if (selectedItem) {
+        selectedItem.className = "slider-list-item-selected";
+      } // 创建自定义 事件 然后 传入参数idx  然后 dispatchEvent  执行 事件
+      // this.controllers.dispatchEvent(new CustomEvent("slide", { detail: { index: idx } }))
+
+
+      this.PubSub && this.PubSub.emit("slide", idx);
+    }
+  }, {
+    key: "slideNext",
+    value: function slideNext() {
+      var currentIdx = this.getSelectedItemIndex();
+      var nextIdx = currentIdx === this.items.length - 1 ? 0 : currentIdx + 1;
+      this.slideTo(nextIdx);
+      return this;
+    }
+  }, {
+    key: "slidePrevious",
+    value: function slidePrevious() {
+      var currentIdx = this.getSelectedItemIndex();
+      var previousIdx = currentIdx === 0 ? this.items.length - 1 : currentIdx - 1;
+      this.slideTo(previousIdx);
+      return this;
+    }
+  }, {
+    key: "start",
+    value: function start() {
+      var _this4 = this;
+
+      if (!this.interval) {
+        this.interval = setInterval(function () {
+          _this4.slideNext();
+        }, this.cycle);
+      }
+
+      return this;
+    }
+  }, {
+    key: "stop",
+    value: function stop() {
+      this.interval && clearInterval(this.interval);
+      this.interval = null;
+      return this;
+    } //  链式 调用 直接返回 this 
+
+  }]);
+
+  return Slider;
+}();
+
+var controlPlugin = {
+  //repeat 重复
+  render: function render(Slider) {
+    var template = "<span class=\"slider-list-control-button-selected\"></span>" + " <span class=\"slider-list-control-button\"></span>".repeat(Slider.imgs.length - 1);
+    return " <div class=\"slider-list-control\"> ".concat(template, " </div>");
+  },
+  action: function action(Slider) {
+    // 轮播图控件 （小圆点）
+    var controllers = Slider.container.querySelector(".slider-list-control"); // 缓存 一下小圆点控件
+
+    Slider.controllers = controllers;
+
+    if (controllers) {
+      var button = (0,_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(controllers.children); //   监听 函数 
+
+
+      Slider.container.addEventListener("mouseover", function () {
+        //箭头函数 没有 this 所以 会像外面去 问一下 this 在哪 巧用箭头函数
+        Slider.stop();
+      });
+      Slider.container.addEventListener("mouseout", function () {
+        //箭头函数 没有 this 所以 会像外面去 问一下 this 在哪 巧用箭头函数
+        Slider.start();
+      }); //  问一下 
+
+      controllers.addEventListener("click", function (e) {
+        if (e.target.tagName === "SPAN") {
+          var index = (0,_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(e.target.parentNode.children).indexOf(e.target);
+
+          Slider.slideTo(index);
+        }
+      }); // 浏览器的 自定义事件  （控制原点）
+      // controllers.addEventListener("slide", (e) => {
+      //     const selected = this.controllers.querySelector(".slider-list-control-button-selected")
+      //     if (selected) {
+      //         selected.className = "slider-list-control-button"
+      //         button[e.detail.index].className = "slider-list-control-button-selected"
+      //     }
+      // })
+      // 订阅 模板 方法   （控制原点）
+
+      Slider.PubSub = new PubSub();
+      Slider.PubSub.on("slide", function (idx) {
+        var selected = Slider.controllers.querySelector(".slider-list-control-button-selected");
+
+        if (selected) {
+          selected.className = "slider-list-control-button";
+          button[idx].className = "slider-list-control-button-selected";
+        }
+      });
+    }
+  }
+};
+var nextPlugin = {
+  render: function render(Slider) {
+    return "<a href=\"\" class=\"slider-list-previous\">\n        <p>\uFF1C</p>\n    </a>";
+  },
+  action: function action(Slider) {
+    var next = Slider.container.querySelector(".slider-list-next");
+    console.log(Slider.container);
+    next.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      if (Slider.key) {
+        Slider.stop();
+        Slider.slideNext();
+        Slider.start();
+        Slider.key = false;
+        setTimeout(function () {
+          Slider.key = true;
+        }, 500);
+      }
+    });
+  }
+};
+var previousPlugin = {
+  render: function render(Slider) {
+    return "<a href=\"\" class=\"slider-list-next\">\n        <p>\uFF1E</p>\n    </a>";
+  },
+  action: function action(Slider) {
+    var previous = Slider.container.querySelector(".slider-list-previous");
+    previous.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      if (Slider.key) {
+        Slider.stop();
+        Slider.slidePrevious();
+        Slider.start();
+        Slider.key = false;
+        setTimeout(function () {
+          Slider.key = true;
+        }, 500);
+      }
+    });
+  }
+};
+var imgs = [__webpack_require__(/*! ./img/slide1.jpg */ "./src/img/slide1.jpg"), __webpack_require__(/*! ./img/slide2.webp */ "./src/img/slide2.webp"), __webpack_require__(/*! ./img/slide3.webp */ "./src/img/slide3.webp"), __webpack_require__(/*! ./img/slide4.webp */ "./src/img/slide4.webp")];
+var slider = new Slider("slider", 2000, {
+  width: "975px",
+  height: "460px"
+}, [].concat(imgs), [controlPlugin, nextPlugin, previousPlugin]);
+slider.start();
+
+/***/ }),
+
 /***/ "./src/command.css":
 /*!*************************!*\
   !*** ./src/command.css ***!
@@ -244,6 +839,19 @@ __webpack_require__.r(__webpack_exports__);
 /*!**********************!*\
   !*** ./src/same.css ***!
   \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/slider.css":
+/*!************************!*\
+  !*** ./src/slider.css ***!
+  \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -1017,6 +1625,47 @@ try {
 
 /***/ }),
 
+/***/ "./src/img sync recursive (left_nav)":
+/*!**********************************!*\
+  !*** ./src/img/ sync (left_nav) ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var map = {
+	"./left_nav1.png": "./src/img/left_nav1.png",
+	"./left_nav10.jpg": "./src/img/left_nav10.jpg",
+	"./left_nav2.jpg": "./src/img/left_nav2.jpg",
+	"./left_nav3.jpg": "./src/img/left_nav3.jpg",
+	"./left_nav4.png": "./src/img/left_nav4.png",
+	"./left_nav5.jpg": "./src/img/left_nav5.jpg",
+	"./left_nav6.jpg": "./src/img/left_nav6.jpg",
+	"./left_nav7.jpg": "./src/img/left_nav7.jpg",
+	"./left_nav8.jpg": "./src/img/left_nav8.jpg",
+	"./left_nav9.jpg": "./src/img/left_nav9.jpg"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./src/img sync recursive (left_nav)";
+
+/***/ }),
+
 /***/ "./src/font_3207587_zixofqh46on/iconfont.ttf":
 /*!***************************************************!*\
   !*** ./src/font_3207587_zixofqh46on/iconfont.ttf ***!
@@ -1047,59 +1696,6 @@ module.exports = __webpack_require__.p + "font/iconfont.9889df.woff";
 
 "use strict";
 module.exports = __webpack_require__.p + "font/iconfont.f6bd3d.woff2";
-
-/***/ }),
-
-/***/ "./src/img/left_nav1.png":
-/*!*******************************!*\
-  !*** ./src/img/left_nav1.png ***!
-  \*******************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "img/left_nav1.png";
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js ***!
-  \*********************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _arrayLikeToArray)
-/* harmony export */ });
-function _arrayLikeToArray(arr, len) {
-  if (len == null || len > arr.length) len = arr.length;
-
-  for (var i = 0, arr2 = new Array(len); i < len; i++) {
-    arr2[i] = arr[i];
-  }
-
-  return arr2;
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js ***!
-  \**********************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _arrayWithoutHoles)
-/* harmony export */ });
-/* harmony import */ var _arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayLikeToArray.js */ "./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js");
-
-function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) return (0,_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__["default"])(arr);
-}
 
 /***/ }),
 
@@ -1229,931 +1825,12 @@ function _defineProperty(obj, key, value) {
   return obj;
 }
 
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/iterableToArray.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/iterableToArray.js ***!
-  \********************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _iterableToArray)
-/* harmony export */ });
-function _iterableToArray(iter) {
-  if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter);
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js ***!
-  \**********************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _nonIterableSpread)
-/* harmony export */ });
-function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js ***!
-  \**********************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _toConsumableArray)
-/* harmony export */ });
-/* harmony import */ var _arrayWithoutHoles_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayWithoutHoles.js */ "./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js");
-/* harmony import */ var _iterableToArray_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./iterableToArray.js */ "./node_modules/@babel/runtime/helpers/esm/iterableToArray.js");
-/* harmony import */ var _unsupportedIterableToArray_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./unsupportedIterableToArray.js */ "./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js");
-/* harmony import */ var _nonIterableSpread_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./nonIterableSpread.js */ "./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js");
-
-
-
-
-function _toConsumableArray(arr) {
-  return (0,_arrayWithoutHoles_js__WEBPACK_IMPORTED_MODULE_0__["default"])(arr) || (0,_iterableToArray_js__WEBPACK_IMPORTED_MODULE_1__["default"])(arr) || (0,_unsupportedIterableToArray_js__WEBPACK_IMPORTED_MODULE_2__["default"])(arr) || (0,_nonIterableSpread_js__WEBPACK_IMPORTED_MODULE_3__["default"])();
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js":
-/*!*******************************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js ***!
-  \*******************************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _unsupportedIterableToArray)
-/* harmony export */ });
-/* harmony import */ var _arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayLikeToArray.js */ "./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js");
-
-function _unsupportedIterableToArray(o, minLen) {
-  if (!o) return;
-  if (typeof o === "string") return (0,_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__["default"])(o, minLen);
-  var n = Object.prototype.toString.call(o).slice(8, -1);
-  if (n === "Object" && o.constructor) n = o.constructor.name;
-  if (n === "Map" || n === "Set") return Array.from(o);
-  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return (0,_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__["default"])(o, minLen);
-}
-
 /***/ })
 
-/******/ 	});
-/************************************************************************/
-/******/ 	// The module cache
-/******/ 	var __webpack_module_cache__ = {};
-/******/ 	
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/ 		// Check if module is in cache
-/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
-/******/ 		if (cachedModule !== undefined) {
-/******/ 			return cachedModule.exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
-/******/ 			// no module.loaded needed
-/******/ 			exports: {}
-/******/ 		};
-/******/ 	
-/******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/ 	
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/ 	
-/************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
-/******/ 		__webpack_require__.g = (function() {
-/******/ 			if (typeof globalThis === 'object') return globalThis;
-/******/ 			try {
-/******/ 				return this || new Function('return this')();
-/******/ 			} catch (e) {
-/******/ 				if (typeof window === 'object') return window;
-/******/ 			}
-/******/ 		})();
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
-/******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = (exports) => {
-/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 			}
-/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/publicPath */
-/******/ 	(() => {
-/******/ 		var scriptUrl;
-/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
-/******/ 		var document = __webpack_require__.g.document;
-/******/ 		if (!scriptUrl && document) {
-/******/ 			if (document.currentScript)
-/******/ 				scriptUrl = document.currentScript.src
-/******/ 			if (!scriptUrl) {
-/******/ 				var scripts = document.getElementsByTagName("script");
-/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
-/******/ 			}
-/******/ 		}
-/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
-/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
-/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
-/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
-/******/ 		__webpack_require__.p = scriptUrl + "../";
-/******/ 	})();
-/******/ 	
-/************************************************************************/
-var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
-(() => {
-"use strict";
-var __webpack_exports__ = {};
-/*!*************************!*\
-  !*** ./src/withenav.js ***!
-  \*************************/
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
-
-var withe_nav = [{
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "0元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "2499元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "2499元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "2499元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "2499元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "2499元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "2499元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "2499元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "2499元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "2499元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "2499元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "2499元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "2499元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "2499元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "2499元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "2499元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "2499元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "2499元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "2499元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "9999元起送"
-}, {
-  img: "./src/img/wihtenav1.png",
-  name: "小米6",
-  price: "9999元起送"
-}];
-console.log(withe_nav[0].img);
-
-function _nav() {
-  var price = withe_nav.map(function (e, i) {
-    return e.price;
-  });
-  var name = withe_nav.map(function (e, i) {
-    return e.price;
-  });
-
-  var li_list = (0,_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(document.querySelectorAll(".nav_bottom"));
-
-  console.log(li_list);
-  var x = 0;
-  li_list.forEach(function (e, index) {
-    for (var i = 0; i < 3; i++) {
-      x++;
-      e.insertAdjacentHTML("beforeend", "    <li>\n            <a href=\"#\">\n                <img src=\"./src/img/wihtenav".concat(x + index, ".png\" alt=\"\">\n                <p class=\"name\">").concat(price[x + index - 1], "</p>\n                <p class=\"price\">").concat(name[x + index - 1], "</p>\n                <div class=\"new\">\u65B0\u54C1</div>\n            </a>\n        </li>\n        <div class=\"fenge\"></div>"));
-    }
-
-    x--;
-  });
-}
-
-_nav();
-})();
-
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
-(() => {
-"use strict";
-var __webpack_exports__ = {};
-/*!************************!*\
-  !*** ./src/leftnav.js ***!
-  \************************/
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
-/* harmony import */ var _src_img_left_nav1_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../src/img/left_nav1.png */ "./src/img/left_nav1.png");
-
- // import img2 from '../src/img/left_nav2.jpg'
-// import img3 from '../src/img/left_nav3.jpg '
-// import img4 from '../src/img/left_nav4.png '
-
-var img2 = __webpack_require__(/*! ./img/left_nav1.png */ "./src/img/left_nav1.png");
-
-var img3 = __webpack_require__(/*! ./img/left_nav1.png */ "./src/img/left_nav1.png");
-
-var im4 = __webpack_require__(/*! ./img/left_nav1.png */ "./src/img/left_nav1.png"); // console.log(img1, img2, img3, img4);
-
-
-var arr = [{
-  src: "./src/img/left_nav1.png",
-  name: "小米 5 plus max",
-  number: 8
-}, {
-  src: "./src/img/left_nav2.jpg",
-  name: "小米智能机顶盒",
-  number: 10
-}, {
-  src: "./src/img/left_nav3.jpg",
-  name: "小米笔记本电脑",
-  number: 12
-}, {
-  src: "./src/img/left_nav4.png",
-  name: "小米出行",
-  number: 8
-}, {
-  src: "./src/img/left_nav5.jpg",
-  name: "小米智能路由器",
-  number: 2
-}, {
-  src: "./src/img/left_nav6.jpg",
-  name: "小米 电源配件",
-  number: 8
-}, {
-  src: "./src/img/left_nav7.jpg",
-  name: "小米 健康儿童",
-  number: 8
-}, {
-  src: "./src/img/left_nav8.jpg",
-  name: "小米耳机音箱",
-  number: 20
-}, {
-  src: "./src/img/left_nav9.jpg",
-  name: "勤奋蜂6666",
-  number: 7
-}, {
-  src: "./src/img/left_nav10.jpg",
-  name: "小米生活背包",
-  number: 8
-}];
-var name = arr.map(function (e) {
-  return e.name;
-});
-var src = arr.map(function (e) {
-  return e.src;
-});
-var number = arr.map(function (e) {
-  return e.number;
-});
-
-var li_list = (0,_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(document.querySelector(".left_nav").querySelectorAll(".left_goods"));
-
-function insert() {
-  li_list.forEach(function (e, index) {
-    for (var i = 0; i < number[index]; i++) {
-      e.insertAdjacentHTML("afterbegin", " \n            <li>\n            <div>\n                <img src=\"".concat(src[index], "\" alt=\"\">\n                <i>").concat(name[index], "</i>\n            </div>            \n            </li>\n            "));
-    }
-  });
-}
-
-insert();
-})();
-
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
-(() => {
-"use strict";
-var __webpack_exports__ = {};
-/*!***********************!*\
-  !*** ./src/slider.js ***!
-  \***********************/
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/esm/classCallCheck.js");
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/esm/createClass.js");
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
-
-
-
-
-
-// import "./slider.css"
-// import img2 from "./img/slide2.jpg"
-// import img1 from "./img/slide1.jpg"
-// import img3 from "./img/slide3.jpg"
-// import img4 from "./img/slide4.jpg"
-var PubSub = /*#__PURE__*/function () {
-  function PubSub() {
-    (0,_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, PubSub);
-
-    (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3__["default"])(this, "static", {});
-  }
-
-  (0,_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(PubSub, [{
-    key: "on",
-    value: function on(key, fn) {
-      if (this["static"][key]) {
-        this["static"][key].push(fn);
-      } else {
-        this["static"][key] = [fn];
-      }
-    }
-  }, {
-    key: "emit",
-    value: function emit(key) {
-      for (var _len = arguments.length, rest = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-        rest[_key - 1] = arguments[_key];
-      }
-
-      this["static"][key] && this["static"][key].forEach(function (fns) {
-        fns.apply(void 0, rest);
-      });
-    }
-  }]);
-
-  return PubSub;
-}();
-
-var Slider = /*#__PURE__*/function () {
-  function Slider(id) {
-    var cycle = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 3000;
-    var style = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-    var imgs = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : [];
-    var Plugins = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : [];
-
-    (0,_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, Slider);
-
-    //获取容器的dom
-    this.Plugin = Plugins;
-    this.key = true;
-    this.container = document.getElementById(id);
-    this.imgs = imgs;
-    this.cycle = cycle;
-    this.style = style;
-    this.registerPlugins();
-    this.begin();
-    this.items = Array.from(this.container.querySelectorAll(".slider-list-item-selected, .slider-list-item"));
-  }
-
-  (0,_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(Slider, [{
-    key: "registerPlugins",
-    value: function registerPlugins() {
-      var _this = this;
-
-      var template = this.render();
-      template = template + this.Plugin.reduce(function (result, items) {
-        return result += items.render(_this);
-      }, "");
-      this.container.innerHTML = template;
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var template = this.imgs.slice(1, this.imgs.length - 1).reduce(function (result, item, index) {
-        return result + "  \n            <li class=\"slider-list-item\">\n             <img src=\"".concat(item, "\" alt=\"\" />\n               </li>");
-      }, " <li class=\"slider-list-item-selected\">\n        <img src=\"".concat(this.imgs[0], "\" alt=\"\" />\n          </li>"));
-      return " \n        <ul class=\"slider-list\">\n        ".concat(template, "\n         </ul>");
-    }
-  }, {
-    key: "begin",
-    value: function begin() {
-      var _this2 = this;
-
-      this.render();
-      this.initStyle(this.style);
-      this.Plugin && this.Plugin.forEach(function (fns) {
-        fns.render(_this2);
-        fns.action(_this2);
-      });
-    }
-  }, {
-    key: "initStyle",
-    value: function initStyle(style) {
-      var _this3 = this;
-
-      Object.keys(style).forEach(function (key) {
-        _this3.setStyleAttribute(_this3.container, key, style[key]);
-      });
-      this.setStyleAttribute(this.container, "position", "relative"); // ????????????为啥要设置相对啊  感觉应该在 css中去设置
-    } // 设置 属性
-
-  }, {
-    key: "setStyleAttribute",
-    value: function setStyleAttribute(el, key, value) {
-      el.style[key] = value;
-    }
-  }, {
-    key: "getSelectedItemIndex",
-    value: function getSelectedItemIndex() {
-      return this.items.indexOf(this.getSelectedItem());
-    }
-  }, {
-    key: "getSelectedItem",
-    value: function getSelectedItem() {
-      //querySelectorAll会返回nodeList是一个类数组 forEach
-      return this.container.querySelector(".slider-list-item-selected");
-    }
-  }, {
-    key: "slideTo",
-    value: function slideTo(idx) {
-      var currentSelectedItem = this.getSelectedItem();
-
-      if (currentSelectedItem) {
-        currentSelectedItem.className = 'slider-list-item';
-      }
-
-      var selectedItem = this.items[idx];
-
-      if (selectedItem) {
-        selectedItem.className = "slider-list-item-selected";
-      } // 创建自定义 事件 然后 传入参数idx  然后 dispatchEvent  执行 事件
-      // this.controllers.dispatchEvent(new CustomEvent("slide", { detail: { index: idx } }))
-
-
-      this.PubSub && this.PubSub.emit("slide", idx);
-    }
-  }, {
-    key: "slideNext",
-    value: function slideNext() {
-      var currentIdx = this.getSelectedItemIndex();
-      var nextIdx = currentIdx === this.items.length - 1 ? 0 : currentIdx + 1;
-      this.slideTo(nextIdx);
-      return this;
-    }
-  }, {
-    key: "slidePrevious",
-    value: function slidePrevious() {
-      var currentIdx = this.getSelectedItemIndex();
-      var previousIdx = currentIdx === 0 ? this.items.length - 1 : currentIdx - 1;
-      this.slideTo(previousIdx);
-      return this;
-    }
-  }, {
-    key: "start",
-    value: function start() {
-      var _this4 = this;
-
-      if (!this.interval) {
-        this.interval = setInterval(function () {
-          _this4.slideNext();
-        }, this.cycle);
-      }
-
-      return this;
-    }
-  }, {
-    key: "stop",
-    value: function stop() {
-      this.interval && clearInterval(this.interval);
-      this.interval = null;
-      return this;
-    } //  链式 调用 直接返回 this 
-
-  }]);
-
-  return Slider;
-}();
-
-var controlPlugin = {
-  //repeat 重复
-  render: function render(Slider) {
-    var template = "<span class=\"slider-list-control-button-selected\"></span>" + " <span class=\"slider-list-control-button\"></span>".repeat(Slider.imgs.length - 1);
-    return " <div class=\"slider-list-control\"> ".concat(template, " </div>");
-  },
-  action: function action(Slider) {
-    // 轮播图控件 （小圆点）
-    var controllers = Slider.container.querySelector(".slider-list-control"); // 缓存 一下小圆点控件
-
-    Slider.controllers = controllers;
-
-    if (controllers) {
-      var button = (0,_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(controllers.children); //   监听 函数 
-
-
-      Slider.container.addEventListener("mouseover", function () {
-        //箭头函数 没有 this 所以 会像外面去 问一下 this 在哪 巧用箭头函数
-        Slider.stop();
-      });
-      Slider.container.addEventListener("mouseout", function () {
-        //箭头函数 没有 this 所以 会像外面去 问一下 this 在哪 巧用箭头函数
-        Slider.start();
-      }); //  问一下 
-
-      controllers.addEventListener("click", function (e) {
-        if (e.target.tagName === "SPAN") {
-          var index = (0,_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(e.target.parentNode.children).indexOf(e.target);
-
-          Slider.slideTo(index);
-        }
-      }); // 浏览器的 自定义事件  （控制原点）
-      // controllers.addEventListener("slide", (e) => {
-      //     const selected = this.controllers.querySelector(".slider-list-control-button-selected")
-      //     if (selected) {
-      //         selected.className = "slider-list-control-button"
-      //         button[e.detail.index].className = "slider-list-control-button-selected"
-      //     }
-      // })
-      // 订阅 模板 方法   （控制原点）
-
-      Slider.PubSub = new PubSub();
-      Slider.PubSub.on("slide", function (idx) {
-        var selected = Slider.controllers.querySelector(".slider-list-control-button-selected");
-
-        if (selected) {
-          selected.className = "slider-list-control-button";
-          button[idx].className = "slider-list-control-button-selected";
-        }
-      });
-    }
-  }
-};
-var nextPlugin = {
-  render: function render(Slider) {
-    return "<a href=\"\" class=\"slider-list-previous\">\n        <p>\uFF1C</p>\n    </a>";
-  },
-  action: function action(Slider) {
-    var next = Slider.container.querySelector(".slider-list-next");
-    console.log(Slider.container);
-    next.addEventListener("click", function (e) {
-      e.preventDefault();
-
-      if (Slider.key) {
-        Slider.stop();
-        Slider.slideNext();
-        Slider.start();
-        Slider.key = false;
-        setTimeout(function () {
-          Slider.key = true;
-        }, 500);
-      }
-    });
-  }
-};
-var previousPlugin = {
-  render: function render(Slider) {
-    return "<a href=\"\" class=\"slider-list-next\">\n        <p>\uFF1E</p>\n    </a>";
-  },
-  action: function action(Slider) {
-    var previous = Slider.container.querySelector(".slider-list-previous");
-    previous.addEventListener("click", function (e) {
-      e.preventDefault();
-
-      if (Slider.key) {
-        Slider.stop();
-        Slider.slidePrevious();
-        Slider.start();
-        Slider.key = false;
-        setTimeout(function () {
-          Slider.key = true;
-        }, 500);
-      }
-    });
-  }
-}; // require("./img/slide1.jpg")
-
-__webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module './img/slide2.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())); // require("./img/slide3.jpg")
-// require("./img/slide4.jpg")
-// let imgs = [require("./img/slide1.jpg"),
-//     require("./img/slide2.jpg"),
-//     require("./img/slide3.jpg"),
-//     require("./img/slide4.jpg")
-// ]
-// let imgs = ["./src/img/slide1.jpg",
-//     "./src/img/slide2.webp",
-//     "./src/img/slide3.webp",
-//     "./src/img/slide4.webp"
-// ]
-
-
-var slider = new Slider("slider", 2000, {
-  width: "975px",
-  height: "460px"
-}, (0,_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(imgs), [controlPlugin, nextPlugin, previousPlugin]);
-slider.start();
-})();
-
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
-(() => {
-"use strict";
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _module_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./module.js */ "./src/module.js");
-/* harmony import */ var _command_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./command.css */ "./src/command.css");
-/* harmony import */ var _same_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./same.css */ "./src/same.css");
-/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./index.css */ "./src/index.css");
-/* harmony import */ var _font_3207587_zixofqh46on_iconfont_ttf__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./font_3207587_zixofqh46on/iconfont.ttf */ "./src/font_3207587_zixofqh46on/iconfont.ttf");
-/* harmony import */ var _font_3207587_zixofqh46on_iconfont_woff__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./font_3207587_zixofqh46on/iconfont.woff */ "./src/font_3207587_zixofqh46on/iconfont.woff");
-/* harmony import */ var _font_3207587_zixofqh46on_iconfont_woff2__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./font_3207587_zixofqh46on/iconfont.woff2 */ "./src/font_3207587_zixofqh46on/iconfont.woff2");
-
-
-
-
-
-
-
-
- // import img2 from "../src/img/slide2.jpg"
-// import img1 from "../src/img/slide1.jpg"
-// import img3 from "../src/img/slide3.jpg"
-// import img4 from "../src/img/slide4.jpg"
-// 确认状态 单页面操作
-
-(0,_module_js__WEBPACK_IMPORTED_MODULE_2__.new_state)();
-
-function user() {
-  var user = document.querySelector(".user");
-
-  if (localStorage.getItem("token")) {
-    user.children[0].remove();
-    user.children[1].remove();
-    user.insertAdjacentHTML("afterbegin", " \n        \n        <li> <a href = \"javascript:;\" class = \"login_btn\" >\u6B22\u8FCE\u60A8\uFF01</a><span>|</span ></li> \n        <li><a href = \"javascript:;\" class = \"login_btn\" id=\"over\" >\u9000\u51FA</a><span>|</span ></li>");
-    var over = document.querySelector("#over");
-    over.addEventListener("click", function () {
-      localStorage.clear();
-      window.location.reload();
-    });
-  }
-}
-
-user(); // 购物车
-
-function car() {
-  return _car.apply(this, arguments);
-} // car();
-// 购物车
-// // 生成 所有商品
-// ;
-// (async() => {
-//     let goods = document.querySelector(".goods")
-//     let res = await post_goods("shopData")
-//     res.forEach((e, index) => {
-//         goods.insertAdjacentHTML("beforeend",
-//             ` <li id="${index}">
-//             <a href="javascript:;"><img src="${e.imageUrl}" alt="">
-//              <div class="now_buy"> 立 即 购 买</div>
-//              <ul  style="display: none;">
-//                 <li>${e.id}</li>
-//                 <li>${e.imageUrl}</li>
-//                 <li>${e.name}</li>
-//                 <li>${e.brand}</li>
-//                 <li>${e.sales}</li>
-//                 <li>${e.color}</li>
-//                 <li>${e.cost}</li>
-//               </ul>
-//                 <h3>商品名: ${e.name} </h3>
-//                 <h3>品牌名:${e.brand}</h3>
-//                 <h3>初始销量:${e.sales}</h3>
-//                 <h5>颜色:${e.color}</h5>
-//                 <h4>$${e.cost}</h4>
-//               </a>
-//            </li>`)
-//     });
-//     // 加入购物车
-//     goods.addEventListener("click", (e) => {
-//             if (e.target.className == "now_buy") {
-//                 let arr_goods = [...e.target.nextElementSibling.children],
-//                     data = {
-//                         id: arr_goods[0].innerText,
-//                         name: arr_goods[2].innerText,
-//                         brand: arr_goods[3].innerText,
-//                         imageUrl: arr_goods[1].innerText,
-//                         sales: arr_goods[4].innerText,
-//                         cost: arr_goods[6].innerText,
-//                         color: arr_goods[5].innerText,
-//                     }
-//                 ;
-//                 // (async() => {
-//                 //     let res = await post_buy("addCartData", localStorage.getItem("token"), data)
-//                 //     alert(res.message)
-//                 //     console.log(res);
-//                 // })()
-//                 axios({
-//                     url: "http://180.76.185.37:3000/addCartData",
-//                     method: "post",
-//                     data: {
-//                         token: localStorage.getItem("token"),
-//                         data: data
-//                     },
-//                 }).then((res) => {
-//                     console.log(res.data);
-//                     alert(res.data.message)
-//                 });
-//             }
-//         })
-//         // 加入购物车
-// })()
-// 生成 所有商品
-
-
-function _car() {
-  _car = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee2() {
-    var start, data, res, _car2, car_number, temp_number, shopping_car;
-
-    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function _callee2$(_context2) {
-      while (1) {
-        switch (_context2.prev = _context2.next) {
-          case 0:
-            if (!localStorage.getItem("token")) {
-              _context2.next = 16;
-              break;
-            }
-
-            // 清除 原有数据
-            start = document.querySelector(".start");
-            start.remove(); //生成购物车
-
-            data = {
-              token: localStorage.getItem("token")
-            };
-            _context2.next = 6;
-            return (0,_module_js__WEBPACK_IMPORTED_MODULE_2__.my_AJAX)("http://180.76.185.37:3000/shopData", "POST", data);
-
-          case 6:
-            res = _context2.sent;
-            _car2 = document.querySelector(".car_goods");
-            car_number = document.querySelector(".car_number");
-            temp_number = 0;
-            res.forEach(function (e) {
-              _car2.insertAdjacentHTML("beforeend", "  <li>\n                 <span><img src=\"".concat(e.imageUrl, "\" alt=\"\"> \n                 </span> <span><i>").concat(e.name, "</i></span> \n                 <span><a href=\"javascript:void(0);\">\u5220\u9664</a></span> \n                 <span style=\"display:none\">").concat(e.id, "</span> \n                 </li>"));
-
-              temp_number++;
-            }); //生成购物车
-            //购物车 数量
-
-            car_number.innerHTML = temp_number; //购物车 数量
-            //购物车  长度生成
-
-            shopping_car = document.querySelector(".shopping_car");
-            shopping_car.addEventListener("mouseenter", function demo() {
-              this.children[1].style.height = temp_number * 30 + "px";
-            }, false);
-            shopping_car.addEventListener("mouseleave", function demo() {
-              this.children[1].style.height = 0;
-            }, false); //购物车  长度生成
-            // 删除购物车
-
-            _car2.addEventListener("click", function demo(e) {
-              if (e.target.tagName == "A") {
-                ;
-
-                (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee() {
-                  var data, res;
-                  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function _callee$(_context) {
-                    while (1) {
-                      switch (_context.prev = _context.next) {
-                        case 0:
-                          data = {
-                            token: localStorage.getItem("token"),
-                            id: e.target.parentElement.nextElementSibling.innerHTML
-                          };
-                          _context.next = 3;
-                          return (0,_module_js__WEBPACK_IMPORTED_MODULE_2__.my_AJAX)('http://180.76.185.37:3000/deleteCartData', "POST", data);
-
-                        case 3:
-                          res = _context.sent;
-                          console.log(res);
-
-                          if (res.state == 1) {
-                            alert(res.message);
-                          }
-
-                          e.target.parentNode.parentNode.remove();
-
-                        case 7:
-                        case "end":
-                          return _context.stop();
-                      }
-                    }
-                  }, _callee);
-                }))();
-              }
-            }); // 删除购物车
-            //fetch  跨域为啥？
-            // (async() => {
-            //     let res = await post_data("getCartData", localStorage.getItem("token"))
-            //     console.log(res);
-            // })()
-
-
-          case 16:
-          case "end":
-            return _context2.stop();
-        }
-      }
-    }, _callee2);
-  }));
-  return _car.apply(this, arguments);
-}
-})();
-
-/******/ })()
-;
+},
+/******/ __webpack_require__ => { // webpackRuntimeModules
+/******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+/******/ var __webpack_exports__ = (__webpack_exec__("./src/leftnav.js"), __webpack_exec__("./src/slider.js"), __webpack_exec__("./src/index.js"));
+/******/ }
+]);
 //# sourceMappingURL=main.js.map
